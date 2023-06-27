@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
     <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
     <!-- eigene Stile und Hauptskript -->
     <link rel="stylesheet" href="main.css">
     <script src="spots.js"></script>
@@ -56,6 +58,33 @@
             <p>Mit dem Bus oder Auto von Innsbruck fährt man etwa 40min bis zum Parkplatz Waldesruh, von hier aus geht es zunächst über Forstraßen bergauf, weiter durch ein Kiefernwäldchen bis man schließlich die Baumgrenze und später den See erreicht.</p>
 
         </article>
+        <h2 class="w3-center">Dieser Spot ist auch Tags sehr schön!</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="data/WhatsApp Image 2023-05-21 at 19.36.54.jpeg" style="width:100%">
+  <img class="mySlides" src="data/WhatsApp Image 2023-05-22 at 04.50.43.jpeg" style="width:100%">
+  <img class="mySlides" src="data/WhatsApp Image 2023-05-22 at 06.53.27.jpeg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+ <script>
+ var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+ </script>
         <footer>
             <strong>Datenquellen:</strong>
             <nav>
