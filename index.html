@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head>
+<head>                                                                                                                      <!--Implementierung von Titel und Plugins-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,18 +12,25 @@
     <link rel="shortcut icon" href="icons/photo.png" type="image/x-icon">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
     <!-- Leaflet Providers -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js" integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.13.0/leaflet-providers.min.js"
+        integrity="sha512-5EYsvqNbFZ8HX60keFbe56Wr0Mq5J1RrA0KdVcfGDhnjnzIRsDrT/S3cxdzpVN2NGxAB9omgqnlh4/06TvWCMw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Leaflet FullScreen -->
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
 
     <!-- Leaflet Elevation -->
     <link rel="stylesheet" href="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.css" />
@@ -40,57 +47,65 @@
 <body>
     <main>
         <header>
-            <h2><i class="fa-solid fa-camera-retro"></i> Photospot Lichtsee</h2>
+            <h2><i class="fa-solid fa-camera-retro"></i> Photospot Lichtsee</h2>                                            <!--Überschrift-->
             <nav>
                 <i class="fab fa-github"></i> <a href="https://astrophototirol.github.io/Lichtsee">Github</a>
             </nav>
         </header>
         <article>
             <h1><a href=""></a>Spot 2: Lichtsee</h1>
-            <img src = "https://raw.githubusercontent.com/AstrophotoTirol/astrophototirol.github.io/main/images/lichtsee.png" width = "1200" height = "720" alt = "Lichtsee"><img>
-            <p> Der Lichtsee liegt im hinteren Obernbergtal. Ausgangspunkt ist der Ort Obernberg am Brenner. Dieser See eignet sich durch seine hohe Lage von etwa 2100m gut für die Astrophotographie. Ein freier Blick nach Süden - über den uns bereits bekannten Sattelberg hinweg - 
-                lässt wundervolle Fotos der Milchtraße zu. Wer eine etwas wildere Kulisse liber mag, der kann auch im weiteren Verlauf der Nacht die Milchstraße vor dem imposanten Obernberger Tribulaun einfangen.
-            </p>               
+            <img src="https://raw.githubusercontent.com/AstrophotoTirol/astrophototirol.github.io/main/images/lichtsee.png"  
+                width="1200" height="720" alt="Lichtsee"><img>                                                              <!--Bilder-->
+            <p> Der Lichtsee liegt im hinteren Obernbergtal. Ausgangspunkt ist der Ort Obernberg am Brenner. Dieser See
+                eignet sich durch seine hohe Lage von etwa 2100m gut für die Astrophotographie. Ein freier Blick nach
+                Süden - über den uns bereits bekannten Sattelberg hinweg -
+                lässt wundervolle Fotos der Milchtraße zu. Wer eine etwas wildere Kulisse liber mag, der kann auch im
+                weiteren Verlauf der Nacht die Milchstraße vor dem imposanten Obernberger Tribulaun einfangen.
+            </p>
 
-            <div id="map"></div>
-            <div id="profile"></div>
+            <div id="map"></div>                                                                                            <!--Karte-->
+            <div id="profile"></div>                                                                                        <!--profil-->
 
             <h3>Streckenbeschreibung</h3>
-            <p>Mit dem Bus oder Auto von Innsbruck fährt man etwa 40min bis zum Parkplatz Waldesruh, von hier aus geht es zunächst über Forstraßen bergauf, weiter durch ein Kiefernwäldchen bis man schließlich die Baumgrenze und später den See erreicht.</p>
+            <p>Mit dem Bus oder Auto von Innsbruck fährt man etwa 40min bis zum Parkplatz Waldesruh, von hier aus geht      <!--Streckenbeschreibung-->
+                es zunächst über Forstraßen bergauf, weiter durch ein Kiefernwäldchen bis man schließlich die Baumgrenze
+                und später den See erreicht.</p>
 
         </article>
         <h2 class="w3-center">Dieser Spot ist auch Tags sehr schön!</h2>
 
-<div class="w3-content w3-display-container">
-  <img class="mySlides" src="data/WhatsApp Image 2023-05-21 at 19.36.54.jpeg" style="width:100%">
-  <img class="mySlides" src="data/WhatsApp Image 2023-05-22 at 04.50.43.jpeg" style="width:100%">
-  <img class="mySlides" src="data/WhatsApp Image 2023-05-22 at 06.53.27.jpeg" style="width:100%">
+        <div class="w3-content w3-display-container">
+            <img class="mySlides" src="data/WhatsApp Image 2023-05-21 at 19.36.54.jpeg" style="width:100%">
+            <img class="mySlides" src="data/WhatsApp Image 2023-05-22 at 04.50.43.jpeg" style="width:100%">
+            <img class="mySlides" src="data/WhatsApp Image 2023-05-22 at 06.53.27.jpeg" style="width:100%">
 
-  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-</div>
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
 
- <script>
- var slideIndex = 0;
-carousel();
+        <script>                                                                                                             //Carousel Item (.js)
+            var slideIndex = 0;
+            carousel();
 
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 5000); // Change image every 2 seconds
-}
- </script>
-        <footer>
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > x.length) { slideIndex = 1 }
+                x[slideIndex - 1].style.display = "block";
+                setTimeout(carousel, 5000); // Change image every 2 seconds
+            }
+        </script>
+        <footer>                                                                                                             <!--Datenquellen-->
             <strong>Datenquellen:</strong>
             <nav>
-            
-                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>
+                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol">eGrundkarte
+                    Tirol</a>
+                    <a href="https://github.com/djlorenz/djlorenz.github.io/tree/master/astronomy">Lichtverschmutzungskarten</a> |
+                    <a href="https://github.com/AstrophotoTirol/astrophototirol.github.io">(Astro)photos</a>
             </nav>
         </footer>
     </main>

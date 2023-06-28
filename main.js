@@ -1,4 +1,4 @@
-/* Mutterberger See */
+/* Lichtsee */
 
 // Innsbruck
 let ibk = {
